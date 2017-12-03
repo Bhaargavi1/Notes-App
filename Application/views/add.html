@@ -1,0 +1,102 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel = "stylesheet" href = "/css/bootstrap.css">
+<link rel = "stylesheet" href = "/css/w3css.css">
+<link rel = "stylesheet" href = "/css/app.css">
+<title>Add Your Notes</title>
+</head>
+<body>
+    <header class = 'text-center'>Add New Notes Here</header>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Notes Application</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Adding Notes</a></li>
+                <li><a href="/view">Viewing Notes</a></li>
+                <li><a href="/view">Updating Notes</a></li>
+                <li><a href="/view">Deleting Notes</a></li>
+            </ul>
+             <ul class="nav navbar-nav navbar-right">
+                 <li style = 'margin-right: 40px;'><a href="/">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class = 'row'>
+            <div class = 'col-lg-3 col-md-3 col-sm-10 col-xs-12'>
+                <h3 class = 'text-center color_navy'>Choose A Background</h3>
+                <div class = 'row' style = 'margin-top:40px;'>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'lemon'></button>
+                              </div>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'red'></button>
+                              </div>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'green'></button>
+                              </div>
+                 </div>
+                <div class = 'row top_margin'>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'blue'></button>
+                              </div>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'orange'></button>
+                              </div>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'mseagreen'></button>
+                              </div>
+                </div>
+                <div class = 'row top_margin'>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'purple'></button>
+                              </div>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'khaki'></button>
+                              </div>
+                              <div class = 'col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+                                  <button class = 'colors' id = 'lightgray'></button>
+                              </div>
+                </div>
+            </div>
+            <div class = 'col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center'>
+                <form method="post" action="/addnotes" ng-app = 'myapp' ng-controller = 'Ctrl_retrieve_data' >
+                <input type="text" name="name" value = '{{name}}' class = 'hide'>
+                <input type="text" name="email" value = '{{emailid}}'  class = 'hide'>
+                <textarea name = 'notes_title' class = 'text-left' id = 'notes_head'> Title of the Notes
+                </textarea><br>
+                <textarea name = 'my_notes' class = 'text-left' id = 'notes_area'>Write your Notes Here
+                </textarea>
+                <div class = 'text-center' style = 'margin-top:20px'>
+                    <button class = 'btn btn-lg btn-primary'>Save Notes</button>
+                </div>
+                </form>
+            </div>
+            <div class = 'col-lg-3 col-md-3 col-sm-10 col-xs-12'>
+                <h3 class = 'text-left color_navy'>Choose A Font-Family</h3>
+                <div class = 'fontfamily' id = 'arial' style = 'margin-top:30px'>Arial</div>
+                <div class = 'fontfamily' id = 'tnr'>Times New Roman</div>
+                <div class = 'fontfamily' id = 'arialblack'>Arial Black</div>
+                <div class = 'fontfamily' id = 'roboto'>Roboto</div> 
+                <div class = 'fontfamily' id = 'courier'>Courier</div>
+                <div class = 'fontfamily' id = 'helvetica'>Helvetica</div>
+                <div class = 'fontfamily' id = 'verdana'>Verdana</div>
+                <div class = 'fontfamily' id = 'georgia'>Georgia</div>
+                <div class = 'fontfamily' id = 'comic'>Comic Sans MS</div>
+                <div class = 'fontfamily' id = 'tahoma'>Tahoma</div>
+                <div class = 'fontfamily' id = 'trebuchet'>Trebuchet MS</div>
+            </div>  
+        </div>
+        
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
